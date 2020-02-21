@@ -6,6 +6,16 @@ description: Here you might use some MD. Probably.
 template:
   name: course-example
   repo: course-example-template
+preferences:
+  - type: dropdown
+    name: language
+    label: Language
+    description: Choose your preferred language.
+    options:
+      - label: English
+        value: en
+      - label: Português
+        value: pt
 before:
   - body: hello-world.md
     title: Hello
@@ -15,6 +25,10 @@ steps:
     description: >-
       Description for the Hello World step (used solely for Github's progress
       page)
+    translations:
+      pt:
+        title: Olá
+        description: Descrição para o step de Hello World
     event: issues.closed
     link: '{{ repoUrl }}/issues/1'
     actions:
@@ -32,6 +46,12 @@ steps:
       On this step, we have tests that check if some JSONC files were correctly
       made
     description: Second description
+    translations:
+      pt:
+        title: >-
+          Neste passo teremos testes para verificar se alguns arquivos JSONC
+          foram corretamente criados
+        description: Segunda descrição
     event: status
     link: '{{ repoUrl }}/issues/2'
     actions:
@@ -53,6 +73,12 @@ steps:
       Here, we will get some CSS files and parse them, checking if the correct
       classes were declared
     description: Third description
+    translations:
+      pt:
+        title: >-
+          Aqui, iremos parsear arquivos CSS submetidos e verificar se as classes
+          foram corretamente criadas
+        description: Terceira descrição
     event: status
     link: '{{ repoUrl }}/issues/3'
     actions:
@@ -70,6 +96,10 @@ steps:
         type: createIssue
   - title: Here you can set another title for this step
     description: Every description is required for each step
+    translations:
+      pt:
+        title: Aqui você pode colocar outro título para seu step
+        description: O campo descrição é obrigatório para todo step
     event: status
     link: '{{ repoUrl }}/issues/4'
     actions:
