@@ -23,9 +23,6 @@ steps:
         issue: 1
         data:
           nextIssue: '2'
-          nextName: >-
-            On this step, we have tests that check if some JSONC files were
-            correctly made
       - body: writing-jsonc.md
         title: >-
           On this step, we have tests that check if some JSONC files were
@@ -47,9 +44,6 @@ steps:
         issue: 2
         data:
           nextIssue: '3'
-          nextName: >-
-            Here, we will get some CSS files and parse them, checking if the
-            correct classes were declared
       - body: writing-css.md
         title: >-
           Here, we will get some CSS files and parse them, checking if the
@@ -71,14 +65,11 @@ steps:
         issue: 3
         data:
           nextIssue: '4'
-          nextName: Here you can set another title for this course
       - body: wrapping-up.md
-        title: Here you can set another title for this course
+        title: Here you can set another title for this step
         type: createIssue
-  - title: Here you can set another title for this course
-    description: >-
-      I don't know yet if this is mandatory. If so, I think we have to have
-      objects for defining every step
+  - title: Here you can set another title for this step
+    description: Every description is required for each step
     event: status
     link: '{{ repoUrl }}/issues/4'
     actions:
