@@ -56,7 +56,7 @@ steps:
     link: '{{ repoUrl }}/issues/2'
     actions:
       - type: gate
-        left: '%payload.state'
+        left: '%payload.state%'
         operator: ===
         right: success
       - type: respond
@@ -83,7 +83,7 @@ steps:
     link: '{{ repoUrl }}/issues/3'
     actions:
       - type: gate
-        left: '%payload.state'
+        left: '%payload.state%'
         operator: ===
         right: success
       - type: respond
@@ -104,6 +104,6 @@ steps:
     link: '{{ repoUrl }}/issues/4'
     actions:
       - type: gate
-        left: '%payload.state'
+        left: '%payload.state%'
         operator: ===
         right: success
